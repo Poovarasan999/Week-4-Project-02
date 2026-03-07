@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Validation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  
+</head>
+<body>
+  <main class="card">
+    <h1>Register</h1>
+    <p class="subtitle">Create your account to continue</p>
+
+    <form id="registerForm" novalidate>
+      <div>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" />
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" />
+      </div>
+
+      <div>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" />
+        <div id="passwordHint" class="helper">Minimum 6 characters</div>
+      </div>
+
+      <div>
+        <label for="message">Message</label>
+        <div class="helper">200 characters max</div>
+        <textarea id="message" name="message" placeholder="Type your message..."></textarea>
+        <div id="charCounter" class="helper" aria-live="polite">0/200 characters (200 remaining)</div>
+        <div id="charWarning" class="helper warning" aria-live="polite"></div>
+      </div>
+
+      <button id="submitBtn" type="submit" disabled>Create Account</button>
+      <div id="formErrors" class="form-errors" aria-live="polite" aria-atomic="true"></div>
+    </form>
+  </main>
+  <div id="successToast" class="toast" role="status" aria-live="polite" aria-atomic="true">
+    <span id="toastMessage"></span>
+    <button id="closeToastBtn" type="button" aria-label="Close notification">X</button>
+  </div>
+
+  <script>
+    
+  </script>
+</body>
+</html>
